@@ -1,12 +1,53 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Intro extends React.Component {
+	render() {
+		return (
+		<div className="intro">
+			<div className="container">
+				<h1> Vidisha Jitani </h1>	
+				<p>Interactive Resume</p>
+			</div>
+			<div className="overlay">
+			</div>
+		</div>
+		
+		);
+	}
+}	
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class Profile extends React.Component {
+	render() {
+		return (
+		<div> 
+			ABC
+		</div>
+		)
+	}
+}
+
+class Experiences extends React.Component {
+	render() {
+		return ("experiences")
+	}
+}
+
+
+class Resume extends React.Component {
+	render() {
+		return (
+		<div className="resume">
+			<Intro />
+			<Profile />
+			<Experiences />
+		</div> 
+		);
+	}
+}
+
+ReactDOM.render(
+	<Resume/>,
+	document.getElementById('root')
+);

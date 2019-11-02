@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.intro {
+	position: relative;
+	background: no-repeat center right fixed url(./coffee_2.jpg);
+	background-size: cover;
+	height: 700px;
+}
+
+.intro .container {
+	position: relative;
+	top: 28%;
+	z-index: 4;
+	text-align: center;
+	box-sizing: border-box;
+}
+.intro .container h1 {
+    border-bottom: 1px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    color: #FFFFFF;
+    font-size: 63px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0px 0px 20px;
+}
+
+.intro .container p {
+	font-size: 28px;
+	color: #FFFFFF;
+	margin: 0 0 10px;
+}
+
+.intro .overlay {
+	background-color: pink;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    opacity: 0.75;
+    z-index: 2;
+}
