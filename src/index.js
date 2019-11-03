@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './default.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 class Intro extends React.Component {
@@ -13,6 +13,11 @@ class Intro extends React.Component {
 			</div>
 			<div className="overlay">
 			</div>
+			<a href="#profile" className="scroll-down">
+				<span className="glyphicon glyphicon-chevron-down">
+
+				</span>
+			</a>
 		</div>
 		
 		);
@@ -23,7 +28,7 @@ class Profile extends React.Component {
 	render() {
 		return (
 		<div className="white-bg">		
-		<div className="profile">
+		<div className="profile" id="profile">
 			<h2> Profile </h2>
 			<p className="lead"> Im a creative PHP webdeveloper </p>
 			<hr/>
@@ -86,22 +91,40 @@ class Experiences extends React.Component {
 			<hr/>
 			<h3>Career</h3>
 			<ExpRow org="Shuttl" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
+			<ExpRow org="Morph.ai" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
 			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
 			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
-			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
-
-
 		</div>
 		)
 	}
 }
 
 
+class NavBar extends React.Component {
+	render() {
+		return (
+			<nav className="navbar" role="navigation">
+				<div className="collapse navbar-collapse navbar-ex1-collapse">
+					<ul className="nav navbar-nav">
+						<li className="active">
+							<a href="#profile">Profile</a>
+						</li>
+						<li>
+							<a href="#expereinces">Expereinces</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		);
+	}
+}
+
 class Resume extends React.Component {
 	render() {
 		return (
 		<div className="resume">
 			<Intro />
+			<NavBar />
 			<Profile />
 			<Experiences />
 		</div> 
