@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './default.css';
 import './index.css';
 
 class Intro extends React.Component {
@@ -21,6 +22,7 @@ class Intro extends React.Component {
 class Profile extends React.Component {
 	render() {
 		return (
+		<div className="white-bg">		
 		<div className="profile">
 			<h2> Profile </h2>
 			<p className="lead"> Im a creative PHP webdeveloper </p>
@@ -51,13 +53,46 @@ class Profile extends React.Component {
 				</div>
 			</div>	
 		</div>
+		</div>
 		)
 	}
 }
 
+
+class ExpRow extends React.Component {
+	render() {
+		return (
+		<div className="row">
+			<div className="column">
+				<strong> {this.props.org} </strong>
+				<br/>
+				<span className="exp-period"> {this.props.period}</span>
+			</div>
+			<div className="column">
+				<strong> {this.props.ttl} </strong>
+				<br/>
+				<span> {this.props.details} </span>
+			</div>
+		</div>
+		)
+	}
+} 
+
 class Experiences extends React.Component {
 	render() {
-		return ("experiences")
+		return (
+		<div className="experiences">
+			<h2>Experiences</h2>
+			<hr/>
+			<h3>Career</h3>
+			<ExpRow org="Shuttl" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
+			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
+			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
+			<ExpRow org="Morph" period="Jun,2019 - Present" ttl="Team Lead" details="tegdk"/>
+
+
+		</div>
+		)
 	}
 }
 
