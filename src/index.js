@@ -21,8 +21,35 @@ class Intro extends React.Component {
 class Profile extends React.Component {
 	render() {
 		return (
-		<div> 
-			ABC
+		<div className="profile">
+			<h2> Profile </h2>
+			<p className="lead"> Im a creative PHP webdeveloper </p>
+			<hr/>
+			<div className="row">
+				<div className="column">
+					<h3> About me </h3>
+					<p> I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in a team.</p>
+				</div>
+				<div className="column">
+					<img src="./circle-cropped.png" alt="Vidisha Jitani" width="200px" height="200px" />
+				</div>
+				<div className="column">
+					<h3> Details </h3>
+					<p>
+						<strong>Name: </strong>
+						<br/>
+						Vidisha Jitani
+						<br/>
+						<strong>Age: </strong>
+						<br/>
+						27 years
+						<br/>
+						<strong>Location: </strong>
+						<br/>
+						Gurgaon, India
+					</p>
+				</div>
+			</div>	
 		</div>
 		)
 	}
