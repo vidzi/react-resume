@@ -1,4 +1,5 @@
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css");
 
 
 body {
@@ -134,8 +135,6 @@ a {
 
 
 .navbar {
-    position: fixed;
-    top: 60px;
     border: 0px;
     background-color: #222222;
     position: absolute;
@@ -175,6 +174,40 @@ a {
     z-index: 6;
 }
 
+.navbar .navbar-collapse {
+    padding: 0px;
+    max-height: none;
+}
+
+.navbar .navbar-nav {
+    float: none;
+}
+
+.navbar-nav {
+    margin: 0px;
+}
+
+
+.navbar .nav > li {
+    display: block;
+    float: none;
+    height: 80px;
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: hotpink;
+    color: #FFFFFF;
+}
+
+.navbar .nav > li a {
+    display: block;
+    height: 80px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
 
 
 

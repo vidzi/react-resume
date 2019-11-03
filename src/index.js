@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 class Intro extends React.Component {
@@ -86,7 +85,7 @@ class ExpRow extends React.Component {
 class Experiences extends React.Component {
 	render() {
 		return (
-		<div className="experiences">
+		<div id="experiences" className="experiences">
 			<h2>Experiences</h2>
 			<hr/>
 			<h3>Career</h3>
@@ -103,14 +102,22 @@ class Experiences extends React.Component {
 class NavBar extends React.Component {
 	render() {
 		return (
-			<nav className="navbar" role="navigation">
+			<nav className="navbar navbar-default" role="navigation">
+				<div className="navbar-header">
+					<button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span className="sr-only">Toggle navigation</span>
+						<span className="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+						<span class="icon-bar"> </span>
+					</button>
+				</div>
 				<div className="collapse navbar-collapse navbar-ex1-collapse">
 					<ul className="nav navbar-nav">
 						<li className="active">
 							<a href="#profile">Profile</a>
 						</li>
 						<li>
-							<a href="#expereinces">Expereinces</a>
+							<a href="#experiences">Experiences</a>
 						</li>
 					</ul>
 				</div>
